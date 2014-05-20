@@ -11,7 +11,7 @@ public class Backgroung extends JFrame implements Runnable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	int x,xDirection,y ,yDirection;
+	private static int x,xDirection,y ,yDirection;
 	Image backg;
 	
 	
@@ -32,7 +32,7 @@ public class Backgroung extends JFrame implements Runnable{
 			while(true){
 				move();
 				
-				Thread.sleep(3);
+				Thread.sleep(2);
 			}
 		}catch(Exception e){
 			System.out.println("ERORR " +e);

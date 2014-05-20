@@ -12,14 +12,6 @@ import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-//import sun.awt.image.ImageWatched;
-
-//import com.sun.org.apache.regexp.internal.REDebugCompiler;
-
-
-
-
-
 public class MainWindow extends JFrame {
 	
 	Image backgroung;
@@ -56,10 +48,10 @@ public class MainWindow extends JFrame {
 				score++;
 			}
 			if (keyCode == e.VK_SPACE) {
-				repaint();	
-				score=0;
+				/*repaint();	
+				score=0;*/
 			}
-			//repaint();
+			
 		}
 	}
 	
@@ -104,14 +96,16 @@ public class MainWindow extends JFrame {
 		bluecar.drawBlueCar(g);
 		bluecarsec.drawBlueCar(g);
 
-		if((bluecar.getY()+100==y && bluecar.getX()==x)||(bluecarsec.getY()+100==y&&bluecarsec.getX()==x)){
+		if((bluecar.getY() + 100 == y && bluecar.getX() == x || bluecar.getX() == x && bluecar.getY() == y || bluecar.getX() == x && bluecar.getY() - 100 == y)||
+			(bluecarsec.getY()+ 100 == y && bluecarsec.getX() == x || bluecarsec.getY() == y && bluecarsec.getX() == x || bluecarsec.getY() - 100 == y   && bluecarsec.getX() == x)){
 			g.drawString("game over", 170, 150);
 			g.setColor(Color.BLUE);
 			g.drawString("score:"+score, 180, 180);
 		}
 		else
 		repaint();
-		}
+		
+	}
 	
 	
 	

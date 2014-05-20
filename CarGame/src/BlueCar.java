@@ -12,7 +12,7 @@ public class BlueCar extends JFrame implements Runnable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	int x,xDirection,y ,yDirection;
+	private static int x,xDirection,y ,yDirection;
 	Image bluecar;
 	int [] arr= {125,225,325};
 	
