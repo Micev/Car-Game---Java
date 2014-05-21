@@ -64,6 +64,7 @@ public class MainWindow extends JFrame {
 		setSize(500,500);
 		setResizable(false);
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		//set position of red_car
 		x=225;
